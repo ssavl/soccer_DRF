@@ -10,7 +10,7 @@ class AllLeague(serializers.ModelSerializer):
 
 
 class AllCountry(serializers.ModelSerializer):
-    league_set = AllLeague(many=True, read_only=True)
+    # league_set = AllLeague(many=True, read_only=True)
 
     class Meta:
         model = Country
@@ -25,6 +25,13 @@ class AllTeam(serializers.ModelSerializer):
         fields = '__all__'  # Сюда вводить поля для вывода в api
 
 
+
+
+class AllStatistic(serializers.ModelSerializer):
+
+    class Meta:
+        model = StatsCorner
+        fields = '__all__'
 
 
 
